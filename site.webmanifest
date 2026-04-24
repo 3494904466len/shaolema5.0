@@ -1,0 +1,16 @@
+{
+  "name": "燒了嗎",
+  "short_name": "燒了嗎",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#070A12",
+  "theme_color": "#0BE6C6",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
+

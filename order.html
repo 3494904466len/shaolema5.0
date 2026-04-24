@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0BE6C6" />
+    <title>燒了嗎｜下單</title>
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page="order">
+    <div class="bg-sigil" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="index.html" aria-label="回到首頁">
+          <img class="brand-icon" src="assets/icon.png" alt="" aria-hidden="true" />
+          <div>
+            <div class="brand-title">燒了嗎</div>
+            <div class="kicker">下單區域</div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="主選單">
+          <a href="index.html">主頁</a>
+          <a href="space.html">個人空間</a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="pageRoot">
+      <main class="container" style="padding-bottom:22px">
+      <div class="toolbar">
+        <div class="row cat-tabs" role="tablist" aria-label="分類">
+          <button class="btn btn-primary" type="button" data-cat="衣">衣</button>
+          <button class="btn" type="button" data-cat="食">食</button>
+          <button class="btn" type="button" data-cat="住">住</button>
+          <button class="btn" type="button" data-cat="行">行</button>
+        </div>
+        <div class="pill">購物籃：<strong id="cartCount">0</strong></div>
+      </div>
+
+      <section class="grid split" style="margin-top:14px">
+        <div class="panel">
+          <div class="panel-inner">
+            <div class="panel-titlebar">
+              商品（<span id="catLabel">衣</span>）<span class="muted">·</span>
+              <span id="catDesc" class="muted">溫暖與庇護</span>
+            </div>
+            <div id="products" class="list" style="margin-top:12px"></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-inner">
+            <div class="panel-titlebar">購物籃</div>
+            <div id="cartEmpty" class="empty" style="margin-top:12px">
+              目前購物籃是空的。你可以直接前往焚化（結算）上傳圖片；也可以先從「衣／食／住／行」加入商品再一起投遞。
+            </div>
+            <div id="cart" class="list" style="margin-top:12px"></div>
+            <div class="row" style="margin-top:12px; justify-content:flex-end">
+              <button id="goCheckout" class="btn btn-primary" type="button">前往焚化（結算）</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      </main>
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="assets/supabase.config.js"></script>
+    <script defer src="assets/blessings.js"></script>
+    <script defer src="assets/app.bundle.js"></script>
+  </body>
+</html>
+

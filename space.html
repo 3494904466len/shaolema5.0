@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0BE6C6" />
+    <title>燒了嗎｜個人空間</title>
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page="space">
+    <div class="bg-sigil" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="index.html" aria-label="回到首頁">
+          <img class="brand-icon" src="assets/icon.png" alt="" aria-hidden="true" />
+          <div>
+            <div class="brand-title">燒了嗎</div>
+            <div class="kicker">個人空間</div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="主選單">
+          <a href="index.html">主頁</a>
+          <a href="space.html">個人空間</a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="pageRoot">
+      <main class="container" style="padding-bottom:22px">
+      <section class="grid split" style="margin-top:18px">
+        <div class="panel">
+          <div class="panel-inner">
+            <div class="panel-titlebar">你的符籍</div>
+
+            <div class="form">
+              <div class="field">
+                <div class="label">顯示名稱</div>
+                <input id="displayName" class="input" placeholder="例如：霓虹旅者 / 符紙匠 / 無名氏" />
+              </div>
+
+              <div class="field">
+                <div class="label">建立時間</div>
+                <div class="pill"><span id="createdAt" class="muted">—</span></div>
+              </div>
+            </div>
+
+            <div class="row" style="margin-top:12px">
+              <button id="saveProfile" class="btn btn-primary" type="button">保存</button>
+              <button id="resetUser" class="btn btn-ghost" type="button">切換新使用者</button>
+            </div>
+
+            <div class="toolbar" style="margin-top:14px">
+              <div id="stats" class="row"></div>
+              <div class="row">
+                <a class="btn" href="order.html">前往下單</a>
+                <a class="btn btn-primary" href="station.html">前往空間站</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-inner">
+            <div class="panel-titlebar">近期投遞</div>
+            <div id="recent" class="list" style="margin-top:12px"></div>
+          </div>
+        </div>
+      </section>
+      </main>
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="assets/supabase.config.js"></script>
+    <script defer src="assets/blessings.js"></script>
+    <script defer src="assets/app.bundle.js"></script>
+  </body>
+</html>
+

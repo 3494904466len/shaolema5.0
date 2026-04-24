@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0BE6C6" />
+    <title>燒了嗎｜冥界空間站</title>
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page="station">
+    <div class="bg-sigil" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="index.html" aria-label="回到首頁">
+          <img class="brand-icon" src="assets/icon.png" alt="" aria-hidden="true" />
+          <div>
+            <div class="brand-title">燒了嗎</div>
+            <div class="kicker">冥界空間站</div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="主選單">
+          <a href="index.html">主頁</a>
+          <a href="space.html">個人空間</a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="pageRoot">
+      <main class="container" style="padding-bottom:22px">
+      <div class="toolbar" style="margin-top:18px">
+        <div>
+          <div class="h1" style="margin:0">冥界空間站</div>
+          <div class="lead">此處為您的個人空間，可隨意增添物品</div>
+        </div>
+        <div class="row">
+          <a class="btn btn-ghost" href="order.html">再去下單</a>
+          <button id="deleteOfferings" class="btn" type="button">刪除供品</button>
+        </div>
+      </div>
+
+      <div id="empty" class="empty" style="margin-top:14px">
+        目前還沒有「供品」，你可以：
+        <div class="row" style="margin-top:10px">
+          <a class="btn btn-primary" href="index.html">回首頁上傳圖片</a>
+          <a class="btn" href="order.html">前往下單</a>
+          <a class="btn btn-ghost" href="checkout.html">直接投遞</a>
+        </div>
+      </div>
+
+      <section id="gallery" class="gallery" aria-label="供品圖片牆"></section>
+      </main>
+
+      <div id="deleteModal" class="modal-overlay" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="deleteTitle">
+        <div class="modal-head">
+          <div id="deleteTitle" class="modal-title">刪除供品</div>
+          <button id="deleteClose" class="btn btn-small" type="button">關閉</button>
+        </div>
+        <div class="modal-body">
+          <div class="muted" style="font-size:12px">勾選要刪除的內容（圖片與下單物品）。刪除後無法復原。</div>
+          <div class="row" style="margin-top:10px">
+            <button id="deleteSelectAll" class="btn btn-small btn-ghost" type="button">全選</button>
+            <button id="deleteSelectNone" class="btn btn-small btn-ghost" type="button">全不選</button>
+          </div>
+          <div id="deleteList" class="delete-list" style="margin-top:12px"></div>
+        </div>
+        <div class="modal-foot">
+          <button id="deleteConfirm" class="btn btn-primary" type="button">確認刪除</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="assets/supabase.config.js"></script>
+    <script defer src="assets/blessings.js"></script>
+    <script defer src="assets/app.bundle.js"></script>
+  </body>
+</html>
+

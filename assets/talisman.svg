@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="980" viewBox="0 0 600 980">
+  <defs>
+    <filter id="paperNoise" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 .15 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="paperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6D36B"/>
+      <stop offset=".55" stop-color="#F1C74D"/>
+      <stop offset="1" stop-color="#E8B43A"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".55"/>
+    </filter>
+  </defs>
+
+  <!-- paper -->
+  <path filter="url(#shadow)" d="M92 52
+    Q110 34 136 44
+    L472 64
+    Q496 66 510 90
+    L540 178
+    Q546 196 532 212
+    L520 226
+    L524 266
+    L510 292
+    L520 340
+    L506 370
+    L520 424
+    L505 454
+    L520 520
+    L504 552
+    L522 612
+    L506 646
+    L520 704
+    L502 740
+    L520 800
+    Q528 826 512 844
+    L474 888
+    Q456 910 430 906
+    L142 866
+    Q118 862 106 840
+    L72 770
+    Q62 750 76 734
+    L86 722
+    L82 684
+    L98 654
+    L84 604
+    L100 574
+    L86 520
+    L102 488
+    L88 434
+    L104 404
+    L90 346
+    L108 316
+    L92 254
+    L112 222
+    L92 168
+    Q84 144 98 126
+    L118 102
+    Q130 86 124 70
+    Q118 58 92 52 Z"
+    fill="url(#paperGrad)" stroke="#FFE7A6" stroke-opacity=".55" stroke-width="3"/>
+
+  <!-- noise overlay -->
+  <g filter="url(#paperNoise)" opacity=".65">
+    <rect x="90" y="50" width="440" height="860" fill="#fff"/>
+  </g>
+
+  <!-- red talisman strokes (no text) -->
+  <g opacity=".92" stroke="#B31A18" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M304 190 L304 760" />
+    <path d="M210 270 Q304 230 398 270" />
+    <path d="M230 350 Q304 310 378 350" />
+    <path d="M250 430 Q304 392 358 430" />
+    <path d="M222 515 Q304 560 386 515" />
+    <path d="M248 610 Q304 650 360 610" />
+  </g>
+
+  <!-- stamp-like seal -->
+  <g transform="translate(250 792)" opacity=".95">
+    <rect x="0" y="0" width="110" height="110" rx="14" fill="#9B0F0F" />
+    <rect x="10" y="10" width="90" height="90" rx="12" fill="none" stroke="#F6D36B" stroke-opacity=".55" stroke-width="6"/>
+    <path d="M30 35 L80 35 M30 55 L80 55 M30 75 L80 75" stroke="#F6D36B" stroke-opacity=".65" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>
+

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0BE6C6" />
+    <title>燒了嗎｜結算與投遞</title>
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page="checkout">
+    <div class="bg-sigil" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="index.html" aria-label="回到首頁">
+          <img class="brand-icon" src="assets/icon.png" alt="" aria-hidden="true" />
+          <div>
+            <div class="brand-title">燒了嗎</div>
+            <div class="kicker">結算 · 投遞</div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="主選單">
+          <a href="index.html">主頁</a>
+          <a href="space.html">個人空間</a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="pageRoot">
+      <main class="container" style="padding-bottom:22px">
+      <div id="burnOverlay" class="burn-overlay" aria-hidden="true">
+        <div class="burn-stage">
+          <canvas id="burnCanvas" class="burn-canvas" width="800" height="1200" aria-hidden="true"></canvas>
+          <div class="burn-message" role="status" aria-live="polite">
+            <div class="burn-kicker">祝禱已送達</div>
+            <div id="burnBlessing" class="burn-blessing">願你所念，皆有回音。</div>
+            <div class="burn-subline">紙紮品已送達異時空</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="row">
+          <button id="backToOrder" class="btn" type="button">返回下單</button>
+          <a class="btn btn-ghost" href="station.html">前往冥界空間站</a>
+        </div>
+      </div>
+
+      <section class="grid split" style="margin-top:14px">
+        <div class="panel">
+          <div class="panel-inner">
+            <div class="panel-titlebar">結算內容</div>
+            <div id="summaryEmpty" class="notice" style="margin-top:12px">
+              你目前沒有加入商品。若你在首頁已上傳圖片，也可以直接投遞；或返回下單挑選套裝。
+            </div>
+            <div id="summary" class="list" style="margin-top:12px"></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-inner">
+            <div class="panel-titlebar">投遞設定</div>
+            <form id="checkoutForm" class="form" style="margin-top:12px">
+              <div class="field">
+                <div class="label">留言（可選）</div>
+                <textarea id="note" rows="4" placeholder="寫下你的祝禱、思念或暗語（繁體）"></textarea>
+              </div>
+
+              <div class="field">
+                <div class="label">追加圖片（可選）</div>
+                <input id="extraUpload" class="input" type="file" accept="image/*" multiple />
+                <div class="muted" style="font-size:12px">提示：首頁上傳的圖片會自動帶入；這裡可再加最多 6 張。</div>
+              </div>
+
+              <div class="row" style="justify-content:flex-end; margin-top:4px">
+                <button class="btn btn-primary" type="submit">完成結算並投遞</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      </main>
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="assets/supabase.config.js"></script>
+    <script defer src="assets/blessings.js"></script>
+    <script defer src="assets/app.bundle.js"></script>
+  </body>
+</html>
+
